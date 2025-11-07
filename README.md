@@ -8,7 +8,7 @@ It's built with a modern, decoupled microservice architecture: a powerful **Fast
 
   * **Backend (`main.py`):** A FastAPI server that loads the models and exposes a single `/query` endpoint. It uses the `Retriever` and `Generator` classes to handle all logic.
   * **Frontend (`app.py`):** A standalone Chainlit app that provides the user interface. It makes HTTP requests to the FastAPI backend and streams the response.
-  * **Ingestor (`ing.py`):** A script to process your local PDFs, turn them into vectors, and store them in a local `ChromaDB` database.
+  * **Ingestor (`ingest.py`):** A script to process your local PDFs, turn them into vectors, and store them in a local `ChromaDB` database.
   * **PDF Parsing:** Uses `pymupdf` for fast and accurate text/Markdown extraction from PDFs.
   * **Core Logic:** `LangChain` is used for orchestration, `HuggingFace` models for embeddings, and the **Google Gemini API** for generation.
 
